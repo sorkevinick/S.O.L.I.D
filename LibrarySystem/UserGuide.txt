@@ -1,0 +1,29 @@
+Library Management System with SOLID Principles
+
+Objective:
+The project demonstrates the application of SOLID principles in a library management system, focusing on modular, extensible, and maintainable code.
+
+Principles and Refactoring Justifications:
+
+1. Single Responsibility Principle (SRP):
+- Each class has a single responsibility.
+- BorrowService manages borrowing logic, BookRepository handles book data, and SessionManager manages sessions.
+
+2. Open/Closed Principle (OCP):
+- Interfaces for repository and service classes allow extension without modification.
+- New book types or session storage methods can be added without altering existing classes.
+
+3. Liskov Substitution Principle (LSP):
+- The interfaces allow implementing new repositories or session managers without altering existing code.
+
+4. Interface Segregation Principle (ISP):
+- Each interface provides only relevant methods, avoiding unnecessary dependencies.
+
+5. Dependency Inversion Principle (DIP):
+- BorrowService relies on abstractions (interfaces) rather than concrete implementations.
+
+Execution:
+1. Install dependencies with Composer:
+   composer dump-autoload
+2. Access the system via index.php to test book borrowing and returning functionality.
+
