@@ -1,0 +1,23 @@
+Sistema de Gerenciamento de Biblioteca - Refatoração com SOLID
+
+Este projeto demonstra como refatorar um simples sistema de gerenciamento de biblioteca para seguir os princípios SOLID.
+
+Problemas Iniciais
+A versão inicial tinha uma classe monolítica chamada BookManager que juntava várias responsabilidades. Isso tornava difícil estender ou modificar o sistema sem alterar o código já existente.
+
+Refatoração com SOLID
+Princípio da Responsabilidade Única (SRP):
+
+Dividimos o BookManager em BorrowService para a lógica de empréstimo e BookRepository para o armazenamento dos livros.
+Princípio Aberto/Fechado (OCP):
+
+Introduzimos interfaces para BorrowService e BookRepository. Assim, podemos adicionar novas funcionalidades ou métodos de armazenamento sem modificar o código já existente.
+Princípio da Substituição de Liskov (LSP):
+
+As interfaces permitem substituir implementações por outras, facilitando a troca ou simulação de dependências.
+Princípio da Segregação de Interfaces (ISP):
+
+Definimos interfaces menores e mais específicas em vez de uma única classe que faz tudo.
+Princípio da Inversão de Dependência (DIP):
+
+O BorrowService depende de abstrações (interfaces) em vez de classes específicas, o que aumenta a flexibilidade.
