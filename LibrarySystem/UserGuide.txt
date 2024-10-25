@@ -1,29 +1,26 @@
-Library Management System with SOLID Principles
+Sistema de Gestão de Biblioteca com Princípios SOLID
+Objetivo: O projeto demonstra a aplicação dos princípios SOLID em um sistema de gestão de biblioteca, focando em um código modular, extensível e de fácil manutenção.
 
-Objective:
-The project demonstrates the application of SOLID principles in a library management system, focusing on modular, extensible, and maintainable code.
+Princípios e Justificativas de Refatoração:
 
-Principles and Refactoring Justifications:
+Princípio da Responsabilidade Única (SRP):
 
-1. Single Responsibility Principle (SRP):
-- Each class has a single responsibility.
-- BorrowService manages borrowing logic, BookRepository handles book data, and SessionManager manages sessions.
+Cada classe tem uma única responsabilidade.
+O BorrowService gerencia a lógica de empréstimos, o BookRepository cuida dos dados dos livros, e o SessionManager gerencia as sessões.
+Princípio Aberto/Fechado (OCP):
 
-2. Open/Closed Principle (OCP):
-- Interfaces for repository and service classes allow extension without modification.
-- New book types or session storage methods can be added without altering existing classes.
+Interfaces para classes de repositório e serviços permitem a extensão sem modificar o código existente.
+É possível adicionar novos tipos de livros ou métodos de armazenamento de sessão sem alterar as classes atuais.
+Princípio da Substituição de Liskov (LSP):
 
-3. Liskov Substitution Principle (LSP):
-- The interfaces allow implementing new repositories or session managers without altering existing code.
+As interfaces permitem implementar novos repositórios ou gerenciadores de sessão sem mudar o código existente.
+Princípio da Segregação de Interfaces (ISP):
 
-4. Interface Segregation Principle (ISP):
-- Each interface provides only relevant methods, avoiding unnecessary dependencies.
+Cada interface oferece apenas os métodos relevantes, evitando dependências desnecessárias.
+Princípio da Inversão de Dependência (DIP):
 
-5. Dependency Inversion Principle (DIP):
-- BorrowService relies on abstractions (interfaces) rather than concrete implementations.
+O BorrowService depende de abstrações (interfaces) em vez de implementações concretas.
+Essa abordagem garante que o sistema de gestão da biblioteca seja flexível e fácil de manter.
 
-Execution:
-1. Install dependencies with Composer:
-   composer dump-autoload
-2. Access the system via index.php to test book borrowing and returning functionality.
+
 
